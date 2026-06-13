@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyAI Pro Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{height:100vh;display:flex;justify-content:center;align-items:center;background:radial-gradient(circle at top,#1b2250 0%,#0b1020 40%,#080b14 100%);overflow:hidden;}
+.card{position:relative;z-index:2;width:100%;max-width:430px;padding:42px;background:rgba(16,24,40,.92);backdrop-filter:blur(25px);border:1px solid rgba(255,255,255,.08);border-radius:28px;}
+.logo{width:90px;height:90px;margin:auto;border-radius:24px;background:linear-gradient(135deg,#8b5cf6,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:38px;color:white;margin-bottom:24px;}
+h1{text-align:center;color:white;font-size:30px;margin-bottom:8px;}
+.sub{text-align:center;color:#94a3b8;margin-bottom:30px;}
+input{width:100%;padding:16px;border-radius:16px;border:1px solid #2c3a56;background:#182234;color:white;font-size:15px;outline:none;margin-bottom:18px;}
+button{width:100%;padding:16px;border:none;border-radius:16px;background:linear-gradient(135deg,#8b5cf6,#3b82f6);color:white;font-size:15px;font-weight:700;cursor:pointer;}
+.error{padding:14px;margin-bottom:16px;background:#3b1010;border:1px solid #7f1d1d;border-radius:14px;color:#fca5a5;}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="logo">⚡</div>
+<h1>StudyAI Pro</h1>
+<p class="sub">Premium AI Workspace<br>Powered by Groq + Gemini</p>
+{% if error %}<div class="error">{{ error | e }}</div>{% endif %}
+<form method="POST" autocomplete="off">
+<input type="password" name="password" placeholder="Enter Password" required autofocus>
+<button type="submit">Unlock Workspace</button>
+</form>
+</div>
+</body>
+</html>
